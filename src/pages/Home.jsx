@@ -61,7 +61,7 @@ const Home = ({ onWatchVideo }) => {
               <span className="text-sm font-semibold text-green-200">21,976+ Sites Monitored Live</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-6 leading-[1.1]">
-              TPMS – Theft Prevention Management System
+              TPIAMS – Theft Prevention & Intelligent Alarm Monitoring System
             </h1>
             <p className="text-xl md:text-2xl text-blue-100/80 mb-10 font-light leading-relaxed max-w-2xl">
               Smart IoT-based Security & Monitoring Platform for Telecom Infrastructure
@@ -76,9 +76,14 @@ const Home = ({ onWatchVideo }) => {
                 </div>
                 Watch Promo Video
               </button>
-              <a href="/TPMS_Datasheet.pdf" download="TPMS_Datasheet_ShrotiTelecom.pdf" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold py-4 px-8 rounded-xl transition-all border border-white/20 shadow-xl">
-                <Download size={20} /> Download Datasheet
-              </a>
+              <a
+  href="/TPIAMS_Datasheet_ShrotiTelecom.pdf"
+  download="TPIAMS_Datasheet_ShrotiTelecom.pdf"
+  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold py-4 px-8 rounded-xl transition-all border border-white/20 shadow-xl"
+>
+  <Download size={20} />
+  Download Datasheet
+</a>
               <a href="#about" className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white font-bold py-4 px-8 rounded-xl transition-all">
                 Explore Solution <ChevronRight size={20} />
               </a>
@@ -115,7 +120,7 @@ const Home = ({ onWatchVideo }) => {
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1 space-y-6">
               <h2 className="text-3xl md:text-4xl font-serif text-blue-900 leading-tight">
-                Theft Prevention Management System
+                Theft Prevention & Intelligent Alarm Monitoring System
               </h2>
               <p className="text-base text-gray-700 leading-relaxed text-justify">
                 {tpmsData.aboutShroti}
@@ -123,7 +128,7 @@ const Home = ({ onWatchVideo }) => {
             </div>
             <div className="flex-1">
               <img 
-                src="/images/tpms_img.png" 
+                src="/images/tpiams-device.png.jpg" 
                 alt="TPMS Official Product Label" 
                 className="w-full h-auto shadow-lg"
               />
@@ -138,7 +143,7 @@ const Home = ({ onWatchVideo }) => {
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1 order-2 lg:order-1">
               <img 
-                src="/images/tpms_securty_details.png" 
+                src="/images/theft.png" 
                 alt="TPMS Security Details" 
                 className="w-full h-auto rounded-xl shadow-xl"
               />
@@ -166,14 +171,33 @@ const Home = ({ onWatchVideo }) => {
             <p className="text-lg text-gray-600">Proactive detection across theft, power, and system vulnerabilities — covering every risk scenario.</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-3xl border border-red-100 shadow-sm">
+          {/* 4-Phase Alarm System Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            
+            {/* Phase 1: Site Status & Health */}
+            <div className="bg-white p-8 rounded-3xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-4 mb-8">
-                <div className="bg-red-100 text-red-600 p-3 rounded-xl"><ShieldAlert size={28} /></div>
-                <h3 className="text-2xl font-bold text-red-900">Theft Alarms</h3>
+                <div className="bg-blue-100 text-blue-600 p-3 rounded-xl"><Activity size={28} /></div>
+                <h3 className="text-2xl font-bold text-blue-900">Site Status & Health</h3>
               </div>
               <ul className="space-y-3">
-                {tpmsData.alarms.theft.map((alarm, idx) => (
+                {tpmsData.alarms.siteStatusAndHealth?.map((alarm, idx) => (
+                  <li key={idx} className="flex items-center gap-3 bg-blue-50/50 p-4 rounded-xl border border-blue-50 hover:border-blue-200 transition-colors">
+                    <CheckCircle2 size={18} className="text-blue-500 shrink-0" />
+                    <span className="font-semibold text-gray-800">{alarm}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Phase 2: Theft Management */}
+            <div className="bg-white p-8 rounded-3xl border border-red-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="bg-red-100 text-red-600 p-3 rounded-xl"><ShieldAlert size={28} /></div>
+                <h3 className="text-2xl font-bold text-red-900">Theft Management</h3>
+              </div>
+              <ul className="space-y-3">
+                {tpmsData.alarms.theftManagement?.map((alarm, idx) => (
                   <li key={idx} className="flex items-center gap-3 bg-red-50/50 p-4 rounded-xl border border-red-50 hover:border-red-200 transition-colors">
                     <AlertTriangle size={18} className="text-red-500 shrink-0" />
                     <span className="font-semibold text-gray-800">{alarm}</span>
@@ -182,13 +206,14 @@ const Home = ({ onWatchVideo }) => {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm">
+            {/* Phase 3: Alarm Management */}
+            <div className="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-4 mb-8">
-                <div className="bg-orange-100 text-orange-600 p-3 rounded-xl"><Battery size={28} /></div>
-                <h3 className="text-2xl font-bold text-orange-900">System & Power Alarms</h3>
+                <div className="bg-orange-100 text-orange-600 p-3 rounded-xl"><Zap size={28} /></div>
+                <h3 className="text-2xl font-bold text-orange-900">Alarm Management</h3>
               </div>
               <ul className="space-y-3">
-                {tpmsData.alarms.system.map((alarm, idx) => (
+                {tpmsData.alarms.alarmManagement?.map((alarm, idx) => (
                   <li key={idx} className="flex items-center gap-3 bg-orange-50/50 p-4 rounded-xl border border-orange-50 hover:border-orange-200 transition-colors">
                     <Zap size={18} className="text-orange-500 shrink-0" />
                     <span className="font-semibold text-gray-800">{alarm}</span>
@@ -196,13 +221,30 @@ const Home = ({ onWatchVideo }) => {
                 ))}
               </ul>
             </div>
+
+            {/* Phase 4: Energy Management */}
+            <div className="bg-white p-8 rounded-3xl border border-green-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="bg-green-100 text-green-600 p-3 rounded-xl"><Battery size={28} /></div>
+                <h3 className="text-2xl font-bold text-green-900">Energy Management</h3>
+              </div>
+              <ul className="space-y-3">
+                {tpmsData.alarms.energyManagement?.map((alarm, idx) => (
+                  <li key={idx} className="flex items-center gap-3 bg-green-50/50 p-4 rounded-xl border border-green-50 hover:border-green-200 transition-colors">
+                    <Activity size={18} className="text-green-500 shrink-0" />
+                    <span className="font-semibold text-gray-800">{alarm}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
           </div>
 
           {/* Alerting Features */}
           <div className="mt-12 bg-slate-900 p-8 rounded-3xl text-white">
             <h3 className="text-2xl font-bold mb-8 text-center">Intelligent Alerting Features</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {tpmsData.alarms.features.map((feature, idx) => (
+              {tpmsData.alarms.features?.map((feature, idx) => (
                 <div key={idx} className="bg-white/10 hover:bg-white/15 p-5 rounded-xl text-center border border-white/10 transition-colors">
                   <span className="font-semibold">{feature}</span>
                 </div>
@@ -214,7 +256,7 @@ const Home = ({ onWatchVideo }) => {
           <div className="mt-12 bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col lg:flex-row gap-8 items-center">
             <div className="flex-1">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Multi-Level Escalation System</h3>
-              <p className="text-gray-600 leading-relaxed">When an alarm is triggered, TPMS instantly activates the hooter, sends WhatsApp alerts, makes automated robo-calls, and escalates through L1 to L5 contacts until the issue is resolved.</p>
+              <p className="text-gray-600 leading-relaxed">When an alarm is triggered, TPIAMS instantly activates the hooter, sends WhatsApp alerts, makes automated robo-calls, and escalates through L1 to L5 contacts until the issue is resolved.</p>
             </div>
             <div className="flex-1">
               <img src="/images/calling-system.png" alt="Calling System" className="w-full max-w-sm mx-auto rounded-xl" />
@@ -222,7 +264,6 @@ const Home = ({ onWatchVideo }) => {
           </div>
         </div>
       </section>
-
       {/* ═══════════════════ ARCHITECTURE SECTION ═══════════════════ */}
       <section id="architecture" className="py-28 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -234,7 +275,7 @@ const Home = ({ onWatchVideo }) => {
 
           {/* Architecture Diagram - User's new image */}
           <div className="bg-white rounded-3xl p-3 shadow-2xl mb-16 max-w-5xl mx-auto">
-            <img src="/images/5_layer_architecture.png" alt="TPMS Architecture Diagram" className="w-full rounded-2xl" />
+            <img src="/images/5-step-architecture.png" alt="TPMS Architecture Diagram" className="w-full rounded-2xl" />
           </div>
 
           {/* Layer Cards */}
@@ -289,7 +330,7 @@ const Home = ({ onWatchVideo }) => {
              <div className="order-2 lg:order-1 relative">
                <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl blur opacity-20"></div>
                <img 
-                 src="/images/tpms_whatsapp_notification.png" 
+                 src="/images/TPIAMS_Whatsapp_Notification.png.jpeg" 
                  alt="WhatsApp Alarm Notification" 
                  className="relative w-full rounded-2xl shadow-2xl border border-gray-100" 
                />
@@ -305,7 +346,7 @@ const Home = ({ onWatchVideo }) => {
                  WhatsApp & Voice Alert System
                </h2>
                <p className="text-xl text-gray-600 leading-relaxed">
-                 When a critical alarm is triggered, TPMS doesn't just record it—it ensures the right person is notified instantly. We deliver detailed **WhatsApp alerts** directly to your SOC team and field technicians.
+                 When a critical alarm is triggered, TPIAMS doesn't just record it—it ensures the right person is notified instantly. We deliver detailed **WhatsApp alerts** directly to your SOC team and field technicians.
                </p>
                <div className="grid grid-cols-1 gap-6">
                  <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
@@ -369,7 +410,7 @@ const Home = ({ onWatchVideo }) => {
                 <div className="relative bg-black rounded-[2.5rem] p-2 shadow-2xl border-2 border-slate-700">
                   <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-b-2xl z-20"></div>
                   <img
-                    src="/images/mobile-splash.jpeg"
+                    src="/images/dashboard.png.jpeg"
                     alt="Mobile App Splash"
                     className="w-full rounded-[2.2rem] aspect-[9/19] object-cover bg-slate-900"
                   />
@@ -382,7 +423,7 @@ const Home = ({ onWatchVideo }) => {
                 <div className="relative bg-black rounded-[2.5rem] p-2 shadow-2xl border-2 border-slate-700">
                   <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-b-2xl z-20"></div>
                   <img
-                    src="/images/mobile-dash.jpeg"
+                    src="/images/screen.png.jpeg"
                     alt="Mobile App Dashboard"
                     className="w-full rounded-[2.2rem] aspect-[9/19] object-cover bg-slate-900"
                   />
@@ -437,7 +478,7 @@ const Home = ({ onWatchVideo }) => {
         </div>
       </section>
 
-      {/* ═══════════════════ SECTION 4: WHY CHOOSE TPMS? (Interactive) ═══════════════════ */}
+      {/* ═══════════════════ SECTION 4: WHY CHOOSE TPIAMS? (Interactive) ═══════════════════ */}
       <section className="py-20 bg-gradient-to-b from-white/90 to-blue-50/30 backdrop-blur-md border-b border-blue-100/50 relative z-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <button 
@@ -445,7 +486,7 @@ const Home = ({ onWatchVideo }) => {
             className="w-full flex items-center justify-between group py-4 border-b-2 border-transparent hover:border-blue-600 transition-all"
           >
             <h2 className="text-3xl md:text-4xl font-serif text-blue-900">
-              Why Choose TPMS?
+              Why Choose TPIAMS?
             </h2>
             <div className={`transform transition-transform duration-300 ${expandedSection === 'why-choose' ? 'rotate-180' : ''}`}>
               <ChevronRight size={32} className="text-blue-600" />
@@ -474,7 +515,7 @@ const Home = ({ onWatchVideo }) => {
 
           {expandedSection !== 'why-choose' && (
             <p className="mt-4 text-sm text-blue-600 font-bold animate-pulse cursor-pointer" onClick={() => toggleSection('why-choose')}>
-              Click to learn more about why TPMS is the best choice...
+              Click to learn more about why TPIAMS is the best choice...
             </p>
           )}
         </div>
@@ -484,7 +525,7 @@ const Home = ({ onWatchVideo }) => {
       <section className="py-24 bg-white/90 backdrop-blur-sm relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-8">
-            Get Started with TPMS Today
+            Get Started with TPIAMS Today
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed italic border-l-4 border-blue-600 pl-8 text-left py-4 bg-gray-50 rounded-r-xl">
             {tpmsData.getStartedQuote}

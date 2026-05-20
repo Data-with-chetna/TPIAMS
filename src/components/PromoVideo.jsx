@@ -5,37 +5,37 @@ import { Download, ShieldCheck, Activity, Smartphone, Monitor, ChevronRight, Pla
 const scenes = [
   {
     id: 'intro',
-    title: 'Introducing TPMS',
+    title: 'Introducing TPIAMS',
     subtitle: 'The ultimate solution for the telecom sector. Real-time status updates, security and efficiency.',
-    image: '/images/mobile-splash.jpeg',
+    image: '/images/dashboard.png.jpeg',
     bgColor: 'bg-slate-900',
   },
   {
     id: 'benefits',
     title: 'Complete Site Control',
     subtitle: 'Real-time site status updates, theft alarms, and energy consumption analysis.',
-    image: '/images/mobile-dash.jpeg',
+    image: '/images/screen.png.jpeg',
     bgColor: 'bg-[#005580]',
   },
   {
     id: 'dashboard',
     title: 'Web & Mobile Dashboard',
     subtitle: 'Comprehensive analytics and live site monitoring in one place.',
-    image: '/images/web-dashboard.png', // Using web dashboard for better visibility as requested
+    image: '/images/web-dashboard.png',
     bgColor: 'bg-[#004466]',
   },
   {
     id: 'features',
     title: 'Stay Updated. Stay Secure.',
     subtitle: 'All your telecom data in one place.',
-    image: '/images/tpms-app.jpg',
+    image: '/images/dashboard.png.jpeg',
     bgColor: 'bg-slate-900',
   },
   {
     id: 'download',
     title: 'Download Now',
     subtitle: 'Available on Play Store & App Store',
-    image: '/images/mobile-dash.jpeg',
+    image: '/images/screen.png.jpeg',
     bgColor: 'bg-blue-600',
   }
 ];
@@ -126,7 +126,7 @@ const PromoVideo = ({ onClose }) => {
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                STPL TPMS App
+                STPL TPIAMS App
               </motion.div>
               <h1 className="text-5xl lg:text-7xl font-black text-white mb-6 leading-[1.1] drop-shadow-2xl">
                 {scene.title}
@@ -143,7 +143,7 @@ const PromoVideo = ({ onClose }) => {
                   transition={{ delay: 0.5 }}
                   className="mt-12 flex flex-wrap justify-center lg:justify-start gap-4"
                 >
-                  <a href="https://play.google.com/store/apps/details?id=com.shroti.tpmsapp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-black text-white px-8 py-4 rounded-2xl border border-white/20 hover:bg-white hover:text-black transition-all">
+                  <a href="https://play.google.com/store/search?q=shroti%20telecom&c=apps&hl=en_IN" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-black text-white px-8 py-4 rounded-2xl border border-white/20 hover:bg-white hover:text-black transition-all">
                     <Play size={24} fill="currentColor" />
                     <div className="text-left leading-none">
                       <div className="text-[10px] uppercase font-bold opacity-60">Get it on</div>
@@ -252,7 +252,7 @@ const PromoVideo = ({ onClose }) => {
           <p className="text-[10px] opacity-60">Smart Monitoring. Better Control.</p>
         </div>
         <div className="text-white text-right hidden sm:block">
-          <p className="text-xs font-bold">STPL TPMS APP</p>
+          <p className="text-xs font-bold">STPL TPIAMS APP</p>
           <p className="text-[10px] opacity-60">Available Worldwide</p>
         </div>
       </div>

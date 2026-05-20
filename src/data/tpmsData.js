@@ -6,9 +6,9 @@ export const tpmsData = {
     description: "Smart IoT-based Security & Monitoring Platform for Telecom Infrastructure"
   },
   stats: [
-    { label: "Total Sites", value: "21,976", icon: "Server" },
-    { label: "Active Sites", value: "20,215", icon: "Activity" },
-    { label: "Non-Communication Sites", value: "1,760", icon: "WifiOff" }
+    { label: "Total Sites", value: "9067", icon: "Server" },
+    { label: "Active Sites", value: "8319", icon: "Activity" },
+    { label: "Non-Communication Sites", value: "748", icon: "WifiOff" }
   ],
   products: [
     {
@@ -31,24 +31,43 @@ export const tpmsData = {
     }
   ],
   alarms: {
-    theft: [
-      "Battery Bank Disconnect",
+    siteStatusAndHealth: [
+      "Total Sites",
+      "Active Sites",
+      "Non-Communication Sites",
+      "Internal Battery Status",
+      "Low 48 VDC Fail",
+      "System Cover Open",
+      "Hooter Status"
+    ],
+    theftManagement: [
+      "Battery Bank Disconnect (BB 1 to BB 4)",
       "BTS Cabinet Open",
       "RRU Disconnect",
-      "Solar Panel Theft",
-      "TPMS Cover Open",
+      "Solar Panel Disconnect",
+      "TPIAMS Cover Open",
       "Door Open",
-      "Motion Detection"
+      "Motion Sensor"
     ],
-    system: [
-      "EB Fail",
-      "DG Fail",
+    alarmManagement: [
+      "EB DG Interchanged",
+      "Mains Fail",
       "DG On Load",
+      "DG Fail to Start",
       "Site on Battery",
       "Battery Low Voltage",
+      "Door Open and Fire & Smoke",
+      "HRT (High Room Temperature)",
       "Rectifier Fail",
-      "Fire & Smoke Alert",
-      "System Tampering"
+      "Motion Detection",
+      "All ports are dynamic and configurable"
+    ],
+    energyManagement: [
+      "EB DG Interchanged",
+      "Sites on EB (KWH, RHrs)",
+      "Sites on DG (KWH, RHrs)",
+      "Sites on Battery (KWH, RHrs)",
+      "Daily/Monthly Consumption Report"
     ],
     features: [
       "Dynamic Configuration",
@@ -66,7 +85,7 @@ export const tpmsData = {
   ],
   architecture: [
     { layer: "L1", name: "Field Layer", desc: "Sensors & Detectors", icon: "Radio" },
-    { layer: "L2", name: "Control Layer", desc: "TPMS Controller", icon: "Cpu" },
+    { layer: "L2", name: "Control Layer", desc: "TPIAMS Controller", icon: "Cpu" },
     { layer: "L3", name: "Communication Layer", desc: "GSM / 4G / RS485", icon: "Wifi" },
     { layer: "L4", name: "Cloud Layer", desc: "Data Processing", icon: "Cloud" },
     { layer: "L5", name: "Monitoring Layer", desc: "SOC Dashboard", icon: "Monitor" }
@@ -108,62 +127,50 @@ export const tpmsData = {
     { title: "452+", desc: "Battery Banks Saved" },
     { title: "2000+", desc: "APEC Region" }
   ],
-  aboutShroti: "At Shroti Telecom, we take pride in offering cutting-edge solutions to safeguard the active and passive assets of the telecommunications industry. Our flagship product, TPMS (Theft Prevention Management System), has been at the forefront of protecting valuable assets for the past 8 years, consistently proving its efficacy and reliability.",
-  detailedIntro: "TPMS is an advanced security solution designed specifically for the telecom sector to combat the rising challenges of theft and unauthorized access to assets. Whether it's equipment, infrastructure, or sensitive data, TPMS provides comprehensive protection to ensure the integrity and security of your assets.",
+  aboutShroti: "TPIAMS (Theft Prevention & Intelligent Alarm Monitoring System) is a system designed to check the parameter of telecom sites & protect your telecom sites from theft and vandalism.At Shroti Telecom, we take pride in offering cutting-edge solutions to safeguard the active and passive assets of the telecommunications industry.",
+  detailedIntro: "TPIAMS is an advanced security solution engineered for the telecom sector to eliminate the risks of theft and unauthorized asset access. Whether protecting physical equipment, site infrastructure, or critical data, TPIAMS delivers continuous, intelligent monitoring to safeguard your assets against tampering and security breaches.",
   detailedFeatures: [
     {
-      title: "1. Proactive Theft Prevention",
-      description: "TPMS employs state-of-the-art technology to proactively detect and prevent theft attempts, minimizing the risk of downtime and disruption to operations."
+      title: "1. Intelligent Theft Detection",
+      description: "TPIAMS uses advanced AI-powered sensors and smart alarm systems to instantly detect theft attempts, tower tampering, vibration, and unauthorized access.."
     },
     {
-      title: "2. Comprehensive Asset Protection",
-      description: "From active equipment like base stations and routers to passive infrastructure such as cables and towers, TPMS offers robust protection for all types of critical assets in telecom operations."
+      title: "2. Real-Time Alerts & Notifications",
+      description: "The system sends immediate alerts through SMS, email, dashboard notifications, and sirens, helping security teams respond quickly during emergencies.."
     },
     {
-      title: "3. Real-time Monitoring and Alerts",
-      description: "With TPMS, you can monitor your assets in real-time and receive instant alerts in case of any suspicious activity or unauthorized access, enabling swift response and mitigation of risks."
+      title: "3. Multi-Sensor Security Protection",
+      description: "The platform integrates vibration sensors, motion detectors, smoke sensors, temperature monitoring, and smart cameras for complete site protection.."
     },
     {
       title: "4. Customized Security Solutions",
-      description: "We understand that every telecom environment is unique. That's why TPMS offers customizable security configurations tailored to your specific needs and requirements, ensuring optimal protection without unnecessary complexity."
+      description: "We understand that every telecom environment is unique. That's why TPIAMS offers customizable security configurations tailored to your specific needs and requirements, ensuring optimal protection without unnecessary complexity."
     },
     {
       title: "5. Trusted by Industry Leaders",
-      description: "TPMS has earned the trust of industry leaders, including ATC, Indus, and Airtel, who have chosen our solution to safeguard their critical assets. Our track record of successful implementations and satisfied customers speaks volumes about the reliability and effectiveness of TPMS."
+      description: "TPIAMS has earned the trust of industry leaders, including ATC, Indus, and Airtel, who have chosen our solution to safeguard their critical assets. Our track record of successful implementations and satisfied customers speaks volumes about the reliability and effectiveness of TPIAMS."
     }
   ],
   whyChooseTPMS: [
     {
       title: "1. Proven Performance",
-      description: "With 8 years of successful operation and numerous satisfied customers, TPMS has consistently delivered results, protecting assets and minimizing losses."
+      description: "With 8 years of successful operation and numerous satisfied customers, TPIAMS has consistently delivered results, protecting assets and minimizing losses."
     },
     {
       title: "2. Industry Expertise",
-      description: "Backed by our team of telecom industry experts, TPMS is built to address the unique security challenges faced by telecom operators, ensuring robust protection and peace of mind."
+      description: "Backed by our team of telecom industry experts, TPIAMS is built to address the unique security challenges faced by telecom operators, ensuring robust protection and peace of mind."
     },
     {
       title: "3. Scalability and Flexibility",
-      description: "Whether you operate a small local network or a nationwide infrastructure, TPMS can scale seamlessly to meet your evolving security needs, offering flexibility and versatility without compromising on performance."
+      description: "Whether you operate a small local network or a nationwide infrastructure, TPIAMS can scale seamlessly to meet your evolving security needs, offering flexibility and versatility without compromising on performance."
     }
   ],
-  getStartedQuote: "Protect your telecom assets with the industry-leading security solution – TPMS from Shroti Telecom. Join the ranks of satisfied customers and experience peace of mind knowing that your assets are safeguarded against theft and unauthorized access.",
+  getStartedQuote: "Protect your telecom assets with the industry-leading security solution – TPIAMS from Shroti Telecom. Join the ranks of satisfied customers and experience peace of mind knowing that your assets are safeguarded against theft and unauthorized access.",
   keyBenefits: [
     "Real-time site status updates",
     "Theft and operation alarms",
     "Detailed alarm reports",
     "Energy consumption analysis",
     "Run hour monitoring"
-  ],
-  detailedFeatures: [
-    { title: "Proactive Theft Prevention", description: "TPMS employs state-of-the-art technology to proactively detect and prevent theft attempts, minimizing the risk of asset loss and disruption to operations." },
-    { title: "Comprehensive Asset Protection", description: "From critical equipment like smart meters and routers, to passive infrastructure such as cables and towers, TPMS offers holistic protection for all types of assets crucial to telecom operations." },
-    { title: "Real-time Monitoring and Alerts", description: "With TPMS, you can monitor your assets in real-time and receive instant alerts in case of any suspicious activity or unauthorized access, enabling swift intervention and mitigation of risks." },
-    { title: "Customized Security Solutions", description: "We understand that every telecom environment is unique. That's why TPMS offers customizable security configurations tailored to your specific needs and requirements, ensuring optimal protection without unnecessary complexity." },
-    { title: "Trusted by Industry Leaders", description: "TPMS has earned the trust of industry leaders, including ATC, Indus, and Airtel, who have chosen our solution to safeguard their critical assets." }
-  ],
-  whyChooseTPMS: [
-    { title: "Proven Performance", description: "With years of successful operation and numerous satisfied customers, TPMS has consistently delivered results, protecting assets and minimizing losses." },
-    { title: "Industry Expertise", description: "Backed by our team of telecom industry experts, TPMS is built to address the unique security challenges faced by telecom operators." },
-    { title: "Scalability and Flexibility", description: "Whether you operate a small local network or a nationwide infrastructure, TPMS can scale seamlessly to meet your evolving security needs." }
   ]
 };
