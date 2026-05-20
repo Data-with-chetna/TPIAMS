@@ -159,7 +159,122 @@ const Home = ({ onWatchVideo }) => {
 
 
 
+{/* ═══════════════════ DCEM VIDEO SECTION ═══════════════════ */}
 
+<section className="bg-slate-950 py-24 px-6 relative overflow-hidden">
+
+  {/* BACKGROUND GLOW */}
+
+  <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div>
+
+  <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 blur-3xl rounded-full"></div>
+
+  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+
+    {/* LEFT SIDE CONTENT */}
+
+    <div>
+
+      <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-400/20 rounded-full text-cyan-300 text-sm mb-6">
+        Advanced DCEM Security Module
+      </div>
+
+      <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+
+        DCEM – Door & Cabinet
+        <span className="text-cyan-400"> Event Monitoring</span>
+
+      </h2>
+
+      <p className="text-slate-300 text-lg mt-8 leading-relaxed">
+
+        TPIAMS DCEM continuously monitors telecom tower doors,
+        cabinets and site access activities. If any unauthorized
+        intrusion is detected, the system instantly sends real-time
+        alerts to the SOC team for immediate action.
+
+      </p>
+
+      {/* FEATURES */}
+
+      <div className="grid sm:grid-cols-2 gap-5 mt-10">
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+          <h3 className="text-cyan-400 font-semibold text-lg">
+            Instant Alerts
+          </h3>
+
+          <p className="text-slate-300 text-sm mt-2">
+            Immediate notification to SOC during unauthorized access.
+          </p>
+        </div>
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+          <h3 className="text-cyan-400 font-semibold text-lg">
+            24/7 Monitoring
+          </h3>
+
+          <p className="text-slate-300 text-sm mt-2">
+            Continuous tower protection and surveillance system.
+          </p>
+        </div>
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+          <h3 className="text-cyan-400 font-semibold text-lg">
+            Intrusion Detection
+          </h3>
+
+          <p className="text-slate-300 text-sm mt-2">
+            Detects unauthorized cabinet opening instantly.
+          </p>
+        </div>
+
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+          <h3 className="text-cyan-400 font-semibold text-lg">
+            Smart Telecom Security
+          </h3>
+
+          <p className="text-slate-300 text-sm mt-2">
+            Advanced protection for telecom infrastructure.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* RIGHT SIDE VIDEO */}
+
+    <div className="relative">
+
+      {/* LIVE ALERT */}
+
+      <div className="absolute top-5 left-5 z-20 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">
+
+        ⚠ LIVE ALERT DETECTED
+
+      </div>
+
+      {/* VIDEO GLOW */}
+
+      <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-3xl"></div>
+
+      {/* VIDEO */}
+
+      <video
+        src="/videos/tower.mp4"
+        autoPlay
+        muted
+        loop
+        controls
+        className="relative w-full rounded-3xl border border-cyan-500/20 shadow-2xl"
+      />
+
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* ═══════════════════ ALARM SYSTEM ═══════════════════ */}
