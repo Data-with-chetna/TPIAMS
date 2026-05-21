@@ -58,7 +58,7 @@ const Home = ({ onWatchVideo }) => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-green-200">21,976+ Sites Monitored Live</span>
+              <span className="text-sm font-semibold text-green-200">9067+ Sites Monitored Live</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-6 leading-[1.1]">
               TPIAMS – Theft Prevention & Intelligent Alarm Monitoring System
