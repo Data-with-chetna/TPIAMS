@@ -445,7 +445,7 @@ const Home = ({ onWatchVideo }) => {
              <div className="order-2 lg:order-1 relative">
                <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl blur opacity-20"></div>
                <img 
-                 src="/images/TPIAMS_Whatsapp_Notification.png.jpeg" 
+                 src="/images/TPIAMS_Whatsapp_Notification.png" 
                  alt="WhatsApp Alarm Notification" 
                  className="relative w-full rounded-2xl shadow-2xl border border-gray-100" 
                />
